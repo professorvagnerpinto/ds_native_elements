@@ -4,7 +4,7 @@ import {StyleSheet, View, Text} from 'react-native';
 export default () => {
   return (
     <View style={styles.container}>
-      <Text>Float Action Button</Text>
+      <Text>Floating Action Button</Text>
     </View>
   );
 };

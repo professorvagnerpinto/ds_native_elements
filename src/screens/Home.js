@@ -42,6 +42,86 @@ const list = [
     title: 'Divider',
     icon: 'minus',
   },
+  {
+    title: 'Floating Action Button',
+    icon: 'plus-circle',
+  },
+  {
+    title: 'Header',
+    icon: 'header',
+  },
+  {
+    title: 'Icon',
+    icon: 'try',
+  },
+  {
+    title: 'Image',
+    icon: 'image',
+  },
+  {
+    title: 'Input',
+    icon: 'arrow-circle-o-up',
+  },
+  {
+    title: 'Linear Progress',
+    icon: 'spinner',
+  },
+  {
+    title: 'ListItem',
+    icon: 'list-ul',
+  },
+  {
+    title: 'Overlay',
+    icon: 'clone',
+  },
+  {
+    title: 'Pricing',
+    icon: 'dollar',
+  },
+  {
+    title: 'Rating',
+    icon: 'thumbs-o-up',
+  },
+  {
+    title: 'SearchBar',
+    icon: 'search',
+  },
+  {
+    title: 'Slider',
+    icon: 'sliders',
+  },
+  {
+    title: 'SocialIcon',
+    icon: 'github',
+  },
+  {
+    title: 'SpeedDial',
+    icon: 'bullseye',
+  },
+  {
+    title: 'Switch',
+    icon: 'exchange',
+  },
+  {
+    title: 'Tabs',
+    icon: 'window-restore',
+  },
+  {
+    title: 'Text',
+    icon: 'text-height',
+  },
+  {
+    title: 'Title',
+    icon: 'indent',
+  },
+  {
+    title: 'Tooltip',
+    icon: 'twitch',
+  },
+  {
+    title: 'CircularSlider',
+    icon: 'circle-thin',
+  },
 ];
 
 export default ({navigation}) => {
