@@ -5,8 +5,8 @@ import {Avatar} from 'react-native-elements';
 
 export default () => {
   return (
-    <View style={styles.container}>
-      <ScrollView>
+    <ScrollView>
+      <View style={styles.container}>
         <>
           {/* Title Avatar */}
           <Text style={styles.text}>Title xlarge</Text>
@@ -119,8 +119,8 @@ export default () => {
         </Avatar>
         <Text />
         <Text />
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 

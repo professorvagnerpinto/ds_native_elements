@@ -19,6 +19,9 @@ import BottomSheet from './src/screens/BottomSheet';
 import Buttons from './src/screens/Buttons';
 import ButtonGroup from './src/screens/ButtonGroup';
 import Cards from './src/screens/Cards';
+import CheckBox from './src/screens/CheckBox';
+import Chip from './src/screens/Chip';
+import Divider from './src/screens/Divider';
 
 const theme = {
   Avatar: {
@@ -68,6 +71,9 @@ export default () => {
           <Stack.Screen name="Buttons" component={Buttons} />
           <Stack.Screen name="Button Group" component={ButtonGroup} />
           <Stack.Screen name="Cards" component={Cards} />
+          <Stack.Screen name="Check Box" component={CheckBox} />
+          <Stack.Screen name="Chip" component={Chip} />
+          <Stack.Screen name="Divider" component={Divider} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
