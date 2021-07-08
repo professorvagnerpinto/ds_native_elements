@@ -1,12 +1,23 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-
-// import { Container } from './styles';
+import {StyleSheet, View, Text} from 'react-native';
 
 export default () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Cards</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  text: {
+    fontSize: 20,
+    marginTop: 10,
+  },
+});

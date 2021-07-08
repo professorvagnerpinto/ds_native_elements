@@ -1,6 +1,7 @@
 /**
  * Exemplo do uso da dependência react-native-elements.
  * Uma lib com componentes que passaram pelo processo de Design System.
+ * https://reactnativeelements.com/docs/
  *
  * @format
  * @flow strict-local
@@ -16,6 +17,7 @@ import Avatar from './src/screens/Avatar';
 import Badge from './src/screens/Badge';
 import BottomSheet from './src/screens/BottomSheet';
 import Buttons from './src/screens/Buttons';
+import ButtonGroup from './src/screens/ButtonGroup';
 import Cards from './src/screens/Cards';
 
 const theme = {
@@ -64,6 +66,7 @@ export default () => {
           <Stack.Screen name="Badge" component={Badge} />
           <Stack.Screen name="Bottom Sheet" component={BottomSheet} />
           <Stack.Screen name="Buttons" component={Buttons} />
+          <Stack.Screen name="Button Group" component={ButtonGroup} />
           <Stack.Screen name="Cards" component={Cards} />
         </Stack.Navigator>
       </NavigationContainer>

@@ -2,7 +2,6 @@
 import React from 'react';
 import {StyleSheet, View, ScrollView, Text} from 'react-native';
 import {Avatar} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default () => {
   return (
