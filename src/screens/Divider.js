@@ -1,10 +1,22 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {Divider} from 'react-native-elements';
 
 export default () => {
   return (
     <View style={styles.container}>
-      <Text>Divider</Text>
+      {/* <Divider orientation="horizontal" width={5} /> */}
+
+      <Divider orientation="vertical" width={5} />
+
+      {/* <Divider inset={true} insetType="middle" /> */}
+
+      <Divider
+        orientation="horizontal"
+        subHeader="Test"
+        subHeaderStyle={{color: 'blue'}}
+      />
     </View>
   );
 };
