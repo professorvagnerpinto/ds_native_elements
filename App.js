@@ -67,6 +67,12 @@ const theme = {
       width: '95%',
     },
   },
+  CheckBox: {
+    containerStyle: {
+      width: '95%',
+      backgroundColor: 'transparent',
+    },
+  },
   ListItem: {
     containerStyle: {
       width: '95%',
