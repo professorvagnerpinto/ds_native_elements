@@ -62,6 +62,11 @@ const theme = {
       marginHorizontal: 10,
     },
   },
+  Card: {
+    containerStyle: {
+      width: '95%',
+    },
+  },
   ListItem: {
     containerStyle: {
       width: '95%',

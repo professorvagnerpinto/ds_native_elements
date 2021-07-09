@@ -6,6 +6,7 @@ export default () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const buttons = ['Hello', 'World', 'Buttons'];
 
+  //TODO: ajustar a lógica (ver documentação)
   const updateIndex = index => {
     switch (index) {
       case 0: {
