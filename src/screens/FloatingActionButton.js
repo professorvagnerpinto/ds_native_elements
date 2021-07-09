@@ -8,18 +8,37 @@ export default () => {
   return (
     <View style={styles.container}>
       <FAB
-        title="Create"
+        title="Delete"
         upperCase
         icon={{
-          name: 'home',
+          name: 'trash',
           type: 'font-awesome',
           color: '#fff',
+        }}
+        containerStyle={{
+          width: 120,
+          height: 50,
+          borderRadius: 10,
+        }}
+        buttonStyle={{
+          width: 120,
+          height: 50,
+          borderRadius: 10,
         }}
         onPress={() => alert('foi')}
       />
       <FAB
         title="Create"
-        containerStyle={{width: '35%'}}
+        containerStyle={{
+          width: 120,
+          height: 50,
+          borderRadius: 10,
+        }}
+        buttonStyle={{
+          width: 120,
+          height: 50,
+          borderRadius: 10,
+        }}
         onPress={() => alert('foi')}
       />
       <FAB
@@ -28,17 +47,6 @@ export default () => {
           name: 'plus',
           type: 'font-awesome',
           color: '#fff',
-        }}
-        containerStyle={{
-          width: 60,
-          height: 60,
-          borderRadius: 100,
-        }}
-        buttonStyle={{
-          backgroundColor: 'orange',
-          width: 60,
-          height: 60,
-          borderRadius: 100,
         }}
         onPress={() => alert('foi')}
       />

@@ -73,6 +73,19 @@ const theme = {
       backgroundColor: 'transparent',
     },
   },
+  FAB: {
+    containerStyle: {
+      width: 60,
+      height: 60,
+      borderRadius: 100,
+    },
+    buttonStyle: {
+      backgroundColor: 'orange',
+      width: 60,
+      height: 60,
+      borderRadius: 100,
+    },
+  },
   ListItem: {
     containerStyle: {
       width: '95%',
