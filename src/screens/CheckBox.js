@@ -16,13 +16,14 @@ export default () => {
         checked={checked1}
         onPress={() => setChecked1(!checked1)}
       />
-      <Divider />
+      <Divider orientation="vertical" width={5} />
       <CheckBox
         center
         title="Click Here"
         checked={checked2}
         onPress={() => setChecked2(!checked2)}
       />
+      <Divider orientation="vertical" width={5} />
       <CheckBox
         center
         title="Click Here"
@@ -31,6 +32,7 @@ export default () => {
         uncheckedIcon="circle-o"
         onPress={() => setChecked3(!checked3)}
       />
+      <Divider orientation="vertical" width={5} />
       <CheckBox
         center
         title="Click Here to Remove This Item"
@@ -42,6 +44,7 @@ export default () => {
         checked={checked4}
         onPress={() => setChecked4(!checked4)}
       />
+      <Divider orientation="vertical" width={5} />
       <CheckBox
         center
         title="Add Phone"
@@ -53,6 +56,7 @@ export default () => {
         checked={checked5}
         onPress={() => setChecked5(!checked5)}
       />
+      <Divider orientation="vertical" width={5} />
     </View>
   );
 };
@@ -62,7 +66,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 10,
   },
   text: {
     fontSize: 20,
