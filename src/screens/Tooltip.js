@@ -1,10 +1,11 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text>Tool Tip</Text>
+      <Header title="TOOLTIP" leftPress={() => navigation.goBack()} />
     </View>
   );
 };
@@ -14,10 +15,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 10,
-  },
-  text: {
-    fontSize: 20,
     marginTop: 10,
   },
 });

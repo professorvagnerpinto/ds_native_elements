@@ -2,10 +2,12 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Chip} from 'react-native-elements';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
+      <Header title="CHIP" leftPress={() => navigation.goBack()} />
       <Chip title="Solid Chip" />
 
       <Chip title="Disabled Chip" disabled />

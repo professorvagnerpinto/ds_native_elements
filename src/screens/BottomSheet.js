@@ -3,8 +3,9 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {BottomSheet, ListItem, Button} from 'react-native-elements';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   const [isVisible, setIsVisible] = useState(false);
   const list = [
     {
@@ -28,6 +29,7 @@ export default () => {
 
   return (
     <View style={styles.container}>
+      <Header title="BOTTOM SHEET" leftPress={() => navigation.goBack()} />
       <Button title="Clique para Exibir" onPress={() => setIsVisible(true)} />
       <BottomSheet
         isVisible={isVisible}

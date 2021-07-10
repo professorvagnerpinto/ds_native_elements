@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {ButtonGroup} from 'react-native-elements';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const buttons = ['Hello', 'World', 'Buttons'];
 
@@ -29,7 +30,7 @@ export default () => {
 
   return (
     <View style={styles.container}>
-      {console.log(selectedIndex)}
+      <Header title="BUTTON GROUP" leftPress={() => navigation.goBack()} />
       <ButtonGroup
         buttons={buttons}
         onPress={() => updateIndex(selectedIndex)}

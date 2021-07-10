@@ -3,37 +3,41 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Header from '../components/Header';
 
 const RaisedButton = props => <Button raised {...props} />;
 
-export default () => {
+export default ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <Button
-        icon={<Icon name="arrow-right" size={25} color="white" />}
-        title="Button with icon"
-      />
-      <Button
-        icon={<Icon name="check-circle" size={25} color="white" />}
-        iconRight
-        title="Button with icon"
-      />
-      <Button title="My 2nd Button" loading />
-      <Button
-        title="Clear button"
-        type="clear"
-        buttonStyle={{backgroundColor: 'trasparent'}}
-        titleStyle={{
-          color: 'blue',
-        }}
-      />
-      <RaisedButton
-        title="Outline"
-        type="outline"
-        buttonStyle={{backgroundColor: 'transparent'}}
-        titleStyle={{color: 'blue'}}
-      />
-    </View>
+    <>
+      <Header title="BUTTONS" leftPress={() => navigation.goBack()} />
+      <View style={styles.container}>
+        <Button
+          icon={<Icon name="arrow-right" size={25} color="white" />}
+          title="Button with icon"
+        />
+        <Button
+          icon={<Icon name="check-circle" size={25} color="white" />}
+          iconRight
+          title="Button with icon"
+        />
+        <Button title="My 2nd Button" loading />
+        <Button
+          title="Clear button"
+          type="clear"
+          buttonStyle={{backgroundColor: 'trasparent'}}
+          titleStyle={{
+            color: 'blue',
+          }}
+        />
+        <RaisedButton
+          title="Outline"
+          type="outline"
+          buttonStyle={{backgroundColor: 'transparent'}}
+          titleStyle={{color: 'blue'}}
+        />
+      </View>
+    </>
   );
 };
 

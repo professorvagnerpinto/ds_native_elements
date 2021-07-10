@@ -1,10 +1,11 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text>Speed Dial</Text>
+      <Header title="SPEED DIAL" leftPress={() => navigation.goBack()} />
     </View>
   );
 };

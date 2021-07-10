@@ -1,10 +1,27 @@
+/* eslint-disable no-alert */
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {Header} from 'react-native-elements';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text>Header</Text>
+      <Header
+        leftComponent={{
+          icon: 'arrow-back',
+          type: 'material',
+          color: '#fff',
+          iconStyle: {color: '#fff'},
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{text: 'HEADER', style: {color: '#fff'}}}
+        rightComponent={{
+          icon: 'search',
+          type: 'material',
+          color: '#fff',
+          onPress: () => alert('foi'),
+        }}
+      />
     </View>
   );
 };

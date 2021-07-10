@@ -1,7 +1,8 @@
+/* eslint-disable no-alert */
 import React from 'react';
 import {ScrollView} from 'react-native';
 import {StyleSheet, View} from 'react-native';
-import {ListItem} from 'react-native-elements';
+import {Header, ListItem} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconS from 'react-native-vector-icons/SimpleLineIcons';
 
@@ -126,27 +127,42 @@ const list = [
 
 export default ({navigation}) => {
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        {list.map((item, k) => (
-          <ListItem
-            key={k}
-            bottomDivider
-            onPress={() => {
-              navigation.navigate(item.title);
-            }}>
-            {item.title === 'Badge' ? (
-              <IconS name={item.icon} size={30} color="black" />
-            ) : (
-              <Icon name={item.icon} size={30} color="black" />
-            )}
-            <ListItem.Content>
-              <ListItem.Title>{item.title}</ListItem.Title>
-            </ListItem.Content>
-          </ListItem>
-        ))}
-      </View>
-    </ScrollView>
+    <>
+      <Header
+        barStyle={'dark-content'}
+        centerComponent={{
+          text: 'REACT NATIVE ELEMENTS',
+          style: {color: '#fff'},
+        }}
+        rightComponent={{
+          icon: 'exit-to-app',
+          type: 'material',
+          color: '#fff',
+          onPress: () => alert('foi'),
+        }}
+      />
+      <ScrollView>
+        <View style={styles.container}>
+          {list.map((item, k) => (
+            <ListItem
+              key={k}
+              bottomDivider
+              onPress={() => {
+                navigation.navigate(item.title);
+              }}>
+              {item.title === 'Badge' ? (
+                <IconS name={item.icon} size={30} color="black" />
+              ) : (
+                <Icon name={item.icon} size={30} color="black" />
+              )}
+              <ListItem.Content>
+                <ListItem.Title>{item.title}</ListItem.Title>
+              </ListItem.Content>
+            </ListItem>
+          ))}
+        </View>
+      </ScrollView>
+    </>
   );
 };
 

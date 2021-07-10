@@ -1,11 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import {Avatar, Badge, Icon, withBadge} from 'react-native-elements';
+import {Avatar, Badge} from 'react-native-elements';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
+      <Header title="BADGE" leftPress={() => navigation.goBack()} />
       {/* Standard badge */}
       <Text style={styles.text}>Standard badge</Text>
       <Badge value="99+" status="error" />

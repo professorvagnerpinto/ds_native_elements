@@ -3,10 +3,15 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {FAB} from 'react-native-elements';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
+      <Header
+        title="FLOAT ACTION BUTTON"
+        leftPress={() => navigation.goBack()}
+      />
       <FAB
         title="Delete"
         upperCase

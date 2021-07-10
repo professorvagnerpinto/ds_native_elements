@@ -2,10 +2,12 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Divider} from 'react-native-elements';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
+      <Header title="DIVIDER" leftPress={() => navigation.goBack()} />
       {/* <Divider orientation="horizontal" width={5} /> */}
 
       <Divider orientation="vertical" width={5} />

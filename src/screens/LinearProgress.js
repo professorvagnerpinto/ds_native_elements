@@ -1,10 +1,11 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import Header from '../components/Header';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text>Linear Progress</Text>
+      <Header title="LINEAR PROGRESS" leftPress={() => navigation.goBack()} />
     </View>
   );
 };
