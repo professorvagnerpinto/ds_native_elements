@@ -1,16 +1,36 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import {StyleSheet, View, ScrollView, Text} from 'react-native';
-import {Avatar} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, Avatar} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
     <>
-      <Header title="AVATAR" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'AVATAR',
+        }}
+      />
       <ScrollView>
         <View style={styles.container}>
           <>
+            {/* Standard with accessory */}
+            <Text style={styles.text}>Avatar with accessory</Text>
+            <Avatar
+              size={96}
+              rounded
+              source={{
+                uri: 'https://reactnativeelements.com/img/avatar/avatar--photo.jpg',
+              }}
+              containerStyle={styles.avatarContainer}
+              onPress={() => {
+                alert('foi');
+              }}>
+              <Avatar.Accessory name="pencil" type="font-awesome" size={16} />
+            </Avatar>
             {/* Title Avatar */}
             <Text style={styles.text}>Title xlarge</Text>
             <Avatar
@@ -105,21 +125,6 @@ export default ({navigation}) => {
               icon={{name: 'user', type: 'font-awesome'}}
             />
           </>
-
-          {/* Standard with accessory */}
-          <Text style={styles.text}>Avatar with accessory</Text>
-          <Avatar
-            size={96}
-            rounded
-            source={{
-              uri: 'https://reactnativeelements.com/img/avatar/avatar--photo.jpg',
-            }}
-            containerStyle={styles.avatarContainer}
-            onPress={() => {
-              alert('foi');
-            }}>
-            <Avatar.Accessory name="pencil" type="font-awesome" size={16} />
-          </Avatar>
           <Text />
           <Text />
         </View>

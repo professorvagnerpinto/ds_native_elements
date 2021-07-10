@@ -1,11 +1,18 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Header from '../components/Header';
+import {Header} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header title="TEXT" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'TEXT',
+        }}
+      />
     </View>
   );
 };

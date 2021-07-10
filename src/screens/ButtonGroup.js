@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {ButtonGroup} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, ButtonGroup} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -30,7 +29,14 @@ export default ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Header title="BUTTON GROUP" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'BUTTON GROUP',
+        }}
+      />
       <ButtonGroup
         buttons={buttons}
         onPress={() => updateIndex(selectedIndex)}

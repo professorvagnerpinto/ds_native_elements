@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {CheckBox, Divider} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, CheckBox, Divider} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [checked1, setChecked1] = useState(false);
@@ -12,7 +11,14 @@ export default ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Header title="CHECKBOX" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'CHECKBOX',
+        }}
+      />
       <CheckBox
         title="Click Here"
         checked={checked1}

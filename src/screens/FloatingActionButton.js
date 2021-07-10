@@ -2,15 +2,18 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {FAB} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, FAB} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
     <View style={styles.container}>
       <Header
-        title="FLOAT ACTION BUTTON"
-        leftPress={() => navigation.goBack()}
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'FLOAT ACTION BUTTON',
+        }}
       />
       <FAB
         title="Delete"

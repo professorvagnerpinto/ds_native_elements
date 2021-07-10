@@ -1,11 +1,18 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import Header from '../components/Header';
+import {StyleSheet, View} from 'react-native';
+import {Header} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header title="LINEAR PROGRESS" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'LINEAR PROGRES',
+        }}
+      />
     </View>
   );
 };

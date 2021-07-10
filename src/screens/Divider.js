@@ -1,13 +1,19 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Divider} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, Divider} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header title="DIVIDER" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'DIVIDER',
+        }}
+      />
       {/* <Divider orientation="horizontal" width={5} /> */}
 
       <Divider orientation="vertical" width={5} />

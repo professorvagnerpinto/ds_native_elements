@@ -1,16 +1,22 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Button} from 'react-native-elements';
+import {Header, Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Header from '../components/Header';
 
 const RaisedButton = props => <Button raised {...props} />;
 
 export default ({navigation}) => {
   return (
     <>
-      <Header title="BUTTONS" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'BUTTONS',
+        }}
+      />
       <View style={styles.container}>
         <Button
           icon={<Icon name="arrow-right" size={25} color="white" />}

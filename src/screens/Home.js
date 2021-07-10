@@ -129,10 +129,10 @@ export default ({navigation}) => {
   return (
     <>
       <Header
-        barStyle={'dark-content'}
-        centerComponent={{
-          text: 'REACT NATIVE ELEMENTS',
-          style: {color: '#fff'},
+        leftComponent={{
+          icon: 'menu',
+          type: 'material',
+          onPress: () => alert('foi'),
         }}
         rightComponent={{
           icon: 'exit-to-app',

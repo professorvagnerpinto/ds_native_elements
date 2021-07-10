@@ -1,13 +1,19 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Chip} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, Chip} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header title="CHIP" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'CHIP',
+        }}
+      />
       <Chip title="Solid Chip" />
 
       <Chip title="Disabled Chip" disabled />

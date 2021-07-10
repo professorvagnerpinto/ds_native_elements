@@ -2,8 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {BottomSheet, ListItem, Button} from 'react-native-elements';
-import Header from '../components/Header';
+import {Header, BottomSheet, ListItem, Button} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +28,14 @@ export default ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Header title="BOTTOM SHEET" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'BOTTOM SHEET',
+        }}
+      />
       <Button title="Clique para Exibir" onPress={() => setIsVisible(true)} />
       <BottomSheet
         isVisible={isVisible}

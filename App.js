@@ -87,6 +87,18 @@ const theme = {
       borderRadius: 100,
     },
   },
+  Header: {
+    barStyle: 'dark-content',
+    centerComponent: {
+      text: 'REACT NATIVE ELEMENTS',
+      style: {color: '#fff'},
+    },
+    leftComponent: {
+      icon: 'arrow-back',
+      type: 'material',
+      color: '#fff',
+    },
+  },
   ListItem: {
     containerStyle: {
       width: '95%',

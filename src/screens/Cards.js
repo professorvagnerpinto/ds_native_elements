@@ -2,10 +2,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
-import {Card, ListItem, Button} from 'react-native-elements';
+import {Header, Card, ListItem, Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Header from '../components/Header';
 
 export default ({navigation}) => {
   const users = [
@@ -21,7 +20,14 @@ export default ({navigation}) => {
 
   return (
     <>
-      <Header title="CARDS" leftPress={() => navigation.goBack()} />
+      <Header
+        leftComponent={{
+          onPress: () => navigation.goBack(),
+        }}
+        centerComponent={{
+          text: 'CARDS',
+        }}
+      />
       <ScrollView>
         <View style={styles.container}>
           <Card>
