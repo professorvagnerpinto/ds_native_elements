@@ -16,3 +16,6 @@ ou
 
 "Design System é o conjunto completo de padrões do projeto, documentação e princípios, juntamente com o kit de ferramentas de design e código para atingir esses padrões."
 
+Para ter ganhos em produtividade instale o React Native Elements Snippets:
+<https://marketplace.visualstudio.com/items?itemName=rne.snippets>
+
