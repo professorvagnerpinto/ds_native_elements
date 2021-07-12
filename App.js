@@ -43,6 +43,10 @@ import Text from './src/screens/Text';
 import Title from './src/screens/Title';
 import Tooltip from './src/screens/Tooltip';
 import CircularSlider from './src/screens/CircularSlider';
+import MapFunctionWithAvatar from './src/screens/ListItem/MapFunctionWithAvatar';
+import MapFunctionWithLinkAndIcon from './src/screens/ListItem/MapFunctionWithLinkAndIcon';
+import RNFlatListWithLinkAvatar from './src/screens/ListItem/RNFlatListWithLinkAvatar';
+import ListItemAccordion from './src/screens/ListItem/ListItemAccordion';
 
 const theme = {
   Avatar: {
@@ -101,7 +105,7 @@ const theme = {
   },
   ListItem: {
     containerStyle: {
-      width: '95%',
+      width: '100%',
     },
   },
 };
@@ -155,6 +159,22 @@ export default () => {
             <Stack.Screen name="Title" component={Title} />
             <Stack.Screen name="Tooltip" component={Tooltip} />
             <Stack.Screen name="CircularSlider" component={CircularSlider} />
+            <Stack.Screen
+              name="MapFunctionWithAvatar"
+              component={MapFunctionWithAvatar}
+            />
+            <Stack.Screen
+              name="MapFunctionWithLinkAndIcon"
+              component={MapFunctionWithLinkAndIcon}
+            />
+            <Stack.Screen
+              name="RNFlatListWithLinkAvatar"
+              component={RNFlatListWithLinkAvatar}
+            />
+            <Stack.Screen
+              name="ListItemAccordion"
+              component={ListItemAccordion}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>

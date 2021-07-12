@@ -1,24 +1,18 @@
+/* eslint-disable no-alert */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Header, ListItem} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default ({navigation}) => {
   const list = [
     {
-      name: 'Using Map Function - Implemented with avatar',
-      route: 'MapFunctionWithAvatar',
+      title: 'Appointments',
+      icon: 'addchart',
     },
     {
-      name: 'Using Map Function - Implemented with link and icon',
-      route: 'MapFunctionWithLinkAndIcon',
-    },
-    {
-      name: 'Using RN FlatList - Implemented with link and avatar',
-      route: 'RNFlatListWithLinkAvatar',
-    },
-    {
-      name: 'ListItem Accordion',
-      route: 'ListItemAccordion',
+      title: 'Trips',
+      icon: 'flight-takeoff',
     },
   ];
 
@@ -29,18 +23,19 @@ export default ({navigation}) => {
           onPress: () => navigation.goBack(),
         }}
         centerComponent={{
-          text: 'LIST ITEM',
+          text: 'Map Function with link and icon',
         }}
       />
       <View style={styles.listItem}>
-        {list.map((l, k) => (
-          <ListItem
-            key={k}
-            bottomDivider
-            onPress={() => navigation.navigate(l.route)}>
+        {list.map((item, i) => (
+          <ListItem key={i} bottomDivider>
+            <Icon name={item.icon} size={25} />
             <ListItem.Content>
-              <ListItem.Title>{l.name}</ListItem.Title>
+              <ListItem.Title>{item.title}</ListItem.Title>
             </ListItem.Content>
+            <ListItem.Chevron
+              onPress={() => alert('Navigate to ' + item.title)}
+            />
           </ListItem>
         ))}
       </View>

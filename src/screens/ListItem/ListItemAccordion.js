@@ -10,7 +10,7 @@ export default ({navigation}) => {
           onPress: () => navigation.goBack(),
         }}
         centerComponent={{
-          text: 'SOCIAL ICON',
+          text: 'ListItem Accordion',
         }}
       />
     </View>

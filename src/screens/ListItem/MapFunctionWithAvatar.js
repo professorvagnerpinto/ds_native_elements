@@ -1,24 +1,20 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, ListItem} from 'react-native-elements';
+import {Header, ListItem, Avatar} from 'react-native-elements';
 
 export default ({navigation}) => {
   const list = [
     {
-      name: 'Using Map Function - Implemented with avatar',
-      route: 'MapFunctionWithAvatar',
+      name: 'Amy Farha',
+      avatar_url:
+        'https://reactnativeelements.com/img/avatar/avatar--photo.jpg',
+      subtitle: 'Vice President',
     },
     {
-      name: 'Using Map Function - Implemented with link and icon',
-      route: 'MapFunctionWithLinkAndIcon',
-    },
-    {
-      name: 'Using RN FlatList - Implemented with link and avatar',
-      route: 'RNFlatListWithLinkAvatar',
-    },
-    {
-      name: 'ListItem Accordion',
-      route: 'ListItemAccordion',
+      name: 'Chris Jackson',
+      avatar_url:
+        'https://reactnativeelements.com/img/avatar/avatar--photo.jpg',
+      subtitle: 'Vice Chairman',
     },
   ];
 
@@ -29,17 +25,16 @@ export default ({navigation}) => {
           onPress: () => navigation.goBack(),
         }}
         centerComponent={{
-          text: 'LIST ITEM',
+          text: 'Map Function With Avatar',
         }}
       />
       <View style={styles.listItem}>
         {list.map((l, k) => (
-          <ListItem
-            key={k}
-            bottomDivider
-            onPress={() => navigation.navigate(l.route)}>
+          <ListItem key={k} bottomDivider>
+            <Avatar source={{uri: l.avatar_url}} />
             <ListItem.Content>
               <ListItem.Title>{l.name}</ListItem.Title>
+              <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
             </ListItem.Content>
           </ListItem>
         ))}

@@ -22,10 +22,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 10,
-  },
-  text: {
-    fontSize: 20,
-    marginTop: 10,
   },
 });
