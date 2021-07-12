@@ -20,12 +20,12 @@ const list = [
     icon: 'twitch',
   },
   {
-    title: 'Button Group',
-    icon: 'server',
+    title: 'Button',
+    icon: 'check-circle',
   },
   {
-    title: 'Buttons',
-    icon: 'check-circle',
+    title: 'Button Group',
+    icon: 'server',
   },
   {
     title: 'Cards',

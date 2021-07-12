@@ -14,7 +14,7 @@ export default ({navigation}) => {
           onPress: () => navigation.goBack(),
         }}
         centerComponent={{
-          text: 'BUTTONS',
+          text: 'BUTTON',
         }}
       />
       <Button
