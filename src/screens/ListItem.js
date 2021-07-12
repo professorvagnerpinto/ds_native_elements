@@ -20,6 +20,10 @@ export default ({navigation}) => {
       name: 'ListItem Accordion',
       route: 'ListItemAccordion',
     },
+    {
+      name: 'ListItem Swipeable',
+      route: 'ListItemSwipeable',
+    },
   ];
 
   return (

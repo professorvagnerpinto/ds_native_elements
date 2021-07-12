@@ -47,6 +47,7 @@ import MapFunctionWithAvatar from './src/screens/ListItem/MapFunctionWithAvatar'
 import MapFunctionWithLinkAndIcon from './src/screens/ListItem/MapFunctionWithLinkAndIcon';
 import RNFlatListWithLinkAvatar from './src/screens/ListItem/RNFlatListWithLinkAvatar';
 import ListItemAccordion from './src/screens/ListItem/ListItemAccordion';
+import ListItemSwipeable from './src/screens/ListItem/ListItemSwipeable';
 
 const theme = {
   Avatar: {
@@ -174,6 +175,10 @@ export default () => {
             <Stack.Screen
               name="ListItemAccordion"
               component={ListItemAccordion}
+            />
+            <Stack.Screen
+              name="ListItemSwipeable"
+              component={ListItemSwipeable}
             />
           </Stack.Navigator>
         </NavigationContainer>
