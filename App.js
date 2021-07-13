@@ -109,6 +109,11 @@ const theme = {
       width: '100%',
     },
   },
+  SearchBar: {
+    containerStyle: {
+      width: '95%',
+    },
+  },
 };
 
 const Stack = createStackNavigator();
