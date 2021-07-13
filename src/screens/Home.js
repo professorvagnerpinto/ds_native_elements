@@ -104,7 +104,7 @@ const list = [
     icon: 'exchange',
   },
   {
-    title: 'Tabs',
+    title: 'Tab',
     icon: 'window-restore',
   },
   {

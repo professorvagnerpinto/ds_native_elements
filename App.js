@@ -38,7 +38,7 @@ import Slider from './src/screens/Slider';
 import SocialIcon from './src/screens/SocialIcon';
 import SpeedDial from './src/screens/SpeedDial';
 import Switch from './src/screens/Switch';
-import Tabs from './src/screens/Tabs';
+import Tab from './src/screens/Tab';
 import Text from './src/screens/Text';
 import Title from './src/screens/Title';
 import Tooltip from './src/screens/Tooltip';
@@ -127,10 +127,6 @@ export default () => {
           <Stack.Navigator
             screenOptions={{
               headerShown: false,
-              headerStyle: {
-                backgroundColor: '#dfdfdf',
-              },
-              headerTintColor: '#000',
             }}>
             <Stack.Screen name="Home" component={Home} options={homeStyle} />
             <Stack.Screen name="Avatar" component={Avatar} />
@@ -160,7 +156,7 @@ export default () => {
             <Stack.Screen name="SocialIcon" component={SocialIcon} />
             <Stack.Screen name="SpeedDial" component={SpeedDial} />
             <Stack.Screen name="Switch" component={Switch} />
-            <Stack.Screen name="Tabs" component={Tabs} />
+            <Stack.Screen name="Tab" component={Tab} />
             <Stack.Screen name="Text" component={Text} />
             <Stack.Screen name="Title" component={Title} />
             <Stack.Screen name="Tooltip" component={Tooltip} />
