@@ -118,6 +118,11 @@ const theme = {
   colors: {
     //primary: 'red',
     secundary: 'orange',
+    blue1: '#3498db',
+    blue2: '#00aced',
+    blue3: '#517fa4',
+    orange: '#f50',
+    lilac: '#a82dea',
   },
 };
 

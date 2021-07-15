@@ -1,9 +1,11 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import {Header, Icon} from 'react-native-elements';
+import {Header, Icon, useTheme} from 'react-native-elements';
 
 export default ({navigation}) => {
+  const {theme} = useTheme();
+
   return (
     <View style={styles.container}>
       <Header
@@ -19,17 +21,17 @@ export default ({navigation}) => {
       <Icon name="rowing" />
 
       <Text style={styles.text}>Colored Material</Text>
-      <Icon name="g-translate" type="material" color="#00aced" />
+      <Icon name="g-translate" type="material" color={theme.colors.blue2} />
 
       <Text style={styles.text}>Colored EvilIcon</Text>
-      <Icon name="sc-telegram" type="evilicon" color="#517fa4" />
+      <Icon name="sc-telegram" type="evilicon" color={theme.colors.blue3} />
 
       <Text style={styles.text}>Reversed</Text>
       <Icon
         reverse
         name="ios-american-football"
         type="ionicon"
-        color="#517fa4"
+        color={theme.colors.blue3}
       />
 
       <Text style={styles.text}>Raised</Text>
@@ -37,7 +39,7 @@ export default ({navigation}) => {
         raised
         name="heartbeat"
         type="font-awesome"
-        color="#f50"
+        color={theme.colors.orange}
         onPress={() => alert('foi')}
       />
     </View>

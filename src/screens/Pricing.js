@@ -1,10 +1,12 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, PricingCard} from 'react-native-elements';
+import {Header, PricingCard, useTheme} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 
 export default ({navigation}) => {
+  const {theme} = useTheme();
+
   return (
     <>
       <Header
@@ -18,7 +20,7 @@ export default ({navigation}) => {
       <ScrollView>
         <View style={styles.container}>
           <PricingCard
-            color="#4f9deb"
+            color={theme.colors.blue1}
             title="Free"
             price="$0"
             info={['1 User', 'Basic Support', 'All Core Features']}
@@ -27,7 +29,7 @@ export default ({navigation}) => {
             onButtonPress={() => alert('foi')}
           />
           <PricingCard
-            color="#a82dea"
+            color={theme.colors.lilac}
             title="Starter"
             price="$50"
             info={['1 User', 'Basic Support', 'All Features']}

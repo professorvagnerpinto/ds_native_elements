@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {StyleSheet, View, Animated, Text} from 'react-native';
-import {Header, Slider} from 'react-native-elements';
+import {Header, Slider, useTheme} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default ({navigation}) => {
@@ -9,6 +9,7 @@ export default ({navigation}) => {
   const [value2, setValue2] = useState(0.0);
   const [value3, setValue3] = useState(0.0);
   const [value4, setValue4] = useState(0.0);
+  const {theme} = useTheme();
 
   return (
     <View style={styles.container}>
@@ -63,7 +64,7 @@ export default ({navigation}) => {
                 size={40}
                 reverse
                 containerStyle={{bottom: 40, right: 40}}
-                color="#f50"
+                color={theme.colors.orange}
               />
             ),
           }}

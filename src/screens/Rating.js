@@ -2,11 +2,18 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, Rating, AirbnbRating} from 'react-native-elements';
+import {
+  Header,
+  Rating,
+  AirbnbRating,
+  useTheme,
+  colors,
+} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 
 export default ({navigation}) => {
   const WATER_IMAGE = require('../assets/images/water.png');
+  const {theme} = useTheme();
 
   function ratingCompleted(rating) {
     alert('Rating is: ' + rating);
@@ -65,8 +72,8 @@ export default ({navigation}) => {
           <Rating
             type="custom"
             ratingImage={WATER_IMAGE}
-            ratingColor="#3498db"
-            ratingBackgroundColor="#c8c7c8"
+            ratingColor={theme.colors.blue1}
+            ratingBackgroundColor={colors.grey4}
             startingValue={2}
             ratingCount={5}
             imageSize={20}
