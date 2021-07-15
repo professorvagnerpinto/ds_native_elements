@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {Header} from 'react-native-elements';
 //import {CircularSlider} from 'react-native-elements-universe';
 
@@ -15,6 +15,9 @@ export default ({navigation}) => {
           text: 'CIRCULAR SLIDER',
         }}
       />
+      <Text>
+        Esta lib está com um bug na instalação, veja na pasta node_modules
+      </Text>
       {/* <CircularSlider value={value} onChange={setValue} />
       <CircularSlider value={value} noThumb />
       <CircularSlider maxAngle={90} /> */}
