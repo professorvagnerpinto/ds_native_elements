@@ -40,7 +40,7 @@ import SpeedDial from './src/screens/SpeedDial';
 import Switch from './src/screens/Switch';
 import Tab from './src/screens/Tab';
 import Text from './src/screens/Text';
-import Title from './src/screens/Title';
+import Tile from './src/screens/Tile';
 import Tooltip from './src/screens/Tooltip';
 import CircularSlider from './src/screens/CircularSlider';
 import MapFunctionWithAvatar from './src/screens/ListItem/MapFunctionWithAvatar';
@@ -158,7 +158,7 @@ export default () => {
             <Stack.Screen name="Switch" component={Switch} />
             <Stack.Screen name="Tab" component={Tab} />
             <Stack.Screen name="Text" component={Text} />
-            <Stack.Screen name="Title" component={Title} />
+            <Stack.Screen name="Tile" component={Tile} />
             <Stack.Screen name="Tooltip" component={Tooltip} />
             <Stack.Screen name="CircularSlider" component={CircularSlider} />
             <Stack.Screen

@@ -112,7 +112,7 @@ const list = [
     icon: 'text-height',
   },
   {
-    title: 'Title',
+    title: 'Tile',
     icon: 'indent',
   },
   {
