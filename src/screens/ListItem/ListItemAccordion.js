@@ -2,7 +2,7 @@
 /* eslint-disable no-alert */
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, ListItem, Avatar} from 'react-native-elements';
+import {Header, ListItem, Avatar, colors} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default ({navigation}) => {
@@ -64,7 +64,7 @@ export default ({navigation}) => {
           name: 'chevron-right',
           type: 'material',
           size: 20,
-          color: '#dadada',
+          color: colors.grey4,
         }}>
         <View style={styles.listItem}>
           {list1.map((l, k) => (
@@ -100,7 +100,7 @@ export default ({navigation}) => {
           name: 'chevron-right',
           type: 'material',
           size: 20,
-          color: '#dadada',
+          color: colors.grey4,
         }}>
         <View style={styles.listItem}>
           {list2.map((item, k) => (

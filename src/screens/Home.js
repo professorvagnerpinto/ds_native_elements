@@ -2,7 +2,7 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
 import {StyleSheet, View} from 'react-native';
-import {Header, ListItem} from 'react-native-elements';
+import {Header, ListItem, colors} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconS from 'react-native-vector-icons/SimpleLineIcons';
 
@@ -132,12 +132,13 @@ export default ({navigation}) => {
         leftComponent={{
           icon: 'menu',
           type: 'material',
+          color: colors.white,
           onPress: () => alert('foi'),
         }}
         rightComponent={{
           icon: 'exit-to-app',
           type: 'material',
-          color: '#fff',
+          color: colors.white,
           onPress: () => alert('foi'),
         }}
       />

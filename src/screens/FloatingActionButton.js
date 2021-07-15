@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, FAB} from 'react-native-elements';
+import {Header, FAB, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
@@ -19,9 +19,9 @@ export default ({navigation}) => {
         title="Delete"
         upperCase
         icon={{
-          name: 'trash',
+          name: 'trash-o',
           type: 'font-awesome',
-          color: '#fff',
+          color: colors.white,
         }}
         containerStyle={{
           width: 120,
@@ -52,9 +52,9 @@ export default ({navigation}) => {
       <FAB
         placement="right"
         icon={{
-          name: 'plus',
-          type: 'font-awesome',
-          color: '#fff',
+          name: 'add',
+          type: 'material',
+          color: colors.white,
         }}
         onPress={() => alert('foi')}
       />

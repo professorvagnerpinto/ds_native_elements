@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
-import {Header, Card, ListItem, Button} from 'react-native-elements';
+import {Header, Card, ListItem, Button, colors} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -40,7 +40,7 @@ export default ({navigation}) => {
               structure than actual design.
             </Text>
             <Button
-              icon={<Icon name="code" color="#ffffff" size={22} />}
+              icon={<Icon name="code" color={colors.white} size={22} />}
               containerStyle={{
                 width: '100%',
                 margin: 0,

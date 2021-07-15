@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header} from 'react-native-elements';
+import {Header, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
@@ -10,15 +10,15 @@ export default ({navigation}) => {
         leftComponent={{
           icon: 'arrow-back',
           type: 'material',
-          color: '#fff',
-          iconStyle: {color: '#fff'},
+          color: colors.white,
+          iconStyle: {color: colors.white},
           onPress: () => navigation.goBack(),
         }}
-        centerComponent={{text: 'HEADER', style: {color: '#fff'}}}
+        centerComponent={{text: 'HEADER', style: {color: colors.white}}}
         rightComponent={{
           icon: 'search',
           type: 'material',
-          color: '#fff',
+          color: colors.white,
           onPress: () => alert('foi'),
         }}
       />

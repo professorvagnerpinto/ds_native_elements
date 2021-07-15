@@ -9,7 +9,8 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {ThemeProvider} from 'react-native-elements';
+import {ThemeProvider, colors} from 'react-native-elements';
+import {useColorScheme} from 'react-native-appearance';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -96,12 +97,12 @@ const theme = {
     barStyle: 'dark-content',
     centerComponent: {
       text: 'REACT NATIVE ELEMENTS',
-      style: {color: '#fff'},
+      style: {color: colors.white},
     },
     leftComponent: {
       icon: 'arrow-back',
       type: 'material',
-      color: '#fff',
+      color: colors.white,
     },
   },
   ListItem: {
@@ -114,14 +115,20 @@ const theme = {
       width: '95%',
     },
   },
+  colors: {
+    //primary: 'red',
+    secundary: 'orange',
+  },
 };
 
 const Stack = createStackNavigator();
 
 export default () => {
   Icon.loadFont();
+  let colorScheme = useColorScheme();
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} useDark={colorScheme === 'dark'}>
       <SafeAreaProvider>
         <NavigationContainer>
           <Stack.Navigator
