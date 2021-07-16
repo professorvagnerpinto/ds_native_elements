@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import {Header} from 'react-native-elements';
-import {LinearProgress} from 'react-native-elements';
+import {Header, LinearProgress, useTheme, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [progressValue, setProgressValue] = useState(0);
+  const {theme} = useTheme();
 
   setTimeout(function () {
     setProgressValue(progressValue + 0.2);
@@ -25,18 +25,18 @@ export default ({navigation}) => {
       <LinearProgress />
 
       <Text style={styles.text}>Indeterminate whith color</Text>
-      <LinearProgress color="orange" />
+      <LinearProgress color={theme.colors.orange} />
 
       <Text style={styles.text}>Indeterminate whith color primary</Text>
-      <LinearProgress color="primary" />
+      <LinearProgress color={theme.colors.primary} />
 
       <Text style={styles.text}>Indeterminate whith color secondary</Text>
-      <LinearProgress color="secondary" />
+      <LinearProgress color={theme.colors.secondary} />
 
       <Text style={styles.text}>Determinate</Text>
       <LinearProgress
         variant="determinate"
-        color="green"
+        color={colors.success}
         value={progressValue}
       />
     </View>

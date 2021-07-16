@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, Switch} from 'react-native-elements';
+import {Header, Switch, useTheme} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [state1, setState1] = useState(true);
   const [state2, setState2] = useState(true);
+  const {theme} = useTheme();
 
   return (
     <View style={styles.container}>
@@ -20,7 +21,7 @@ export default ({navigation}) => {
 
       <Switch
         value={state2}
-        color="orange"
+        color={theme.colors.orange}
         onValueChange={() => setState2(!state2)}
       />
     </View>

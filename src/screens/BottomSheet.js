@@ -1,10 +1,16 @@
 /* eslint-disable no-alert */
-/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, BottomSheet, ListItem, Button} from 'react-native-elements';
+import {
+  Header,
+  BottomSheet,
+  ListItem,
+  Button,
+  useTheme,
+} from 'react-native-elements';
 
 export default ({navigation}) => {
+  const {theme} = useTheme();
   const [isVisible, setIsVisible] = useState(false);
   const list = [
     {
@@ -18,7 +24,7 @@ export default ({navigation}) => {
     {
       title: 'Cancelar',
       containerStyle: {
-        backgroundColor: 'red',
+        backgroundColor: theme.colors.secondary,
         width: '100%',
       },
       titleStyle: {color: 'white'},
@@ -39,7 +45,7 @@ export default ({navigation}) => {
       <Button title="Clique para Exibir" onPress={() => setIsVisible(true)} />
       <BottomSheet
         isVisible={isVisible}
-        containerStyle={{backgroundColor: 'rgba(0.5, 0.25, 0, 0.2)'}}>
+        containerStyle={{backgroundColor: theme.colors.modalBackground}}>
         {list.map((l, k) => (
           <ListItem
             key={k}

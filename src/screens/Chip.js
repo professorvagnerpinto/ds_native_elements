@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, Chip} from 'react-native-elements';
+import {Header, Chip, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
@@ -22,7 +22,7 @@ export default ({navigation}) => {
         title="Outlined Chip"
         type="outline"
         buttonStyle={{backgroundColor: 'transparent'}}
-        titleStyle={{color: 'black'}}
+        titleStyle={{color: colors.black}}
       />
 
       <Chip
@@ -38,7 +38,7 @@ export default ({navigation}) => {
           name: 'bluetooth',
           type: 'font-awesome',
           size: 20,
-          color: 'white',
+          color: colors.white,
         }}
       />
 
@@ -48,7 +48,7 @@ export default ({navigation}) => {
           name: 'close',
           type: 'font-awesome',
           size: 20,
-          color: 'white',
+          color: colors.white,
         }}
         iconRight
       />

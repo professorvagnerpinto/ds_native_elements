@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, CheckBox, Divider} from 'react-native-elements';
+import {Header, CheckBox, Divider, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [checked1, setChecked1] = useState(false);
@@ -48,7 +48,7 @@ export default ({navigation}) => {
         iconType="material"
         checkedIcon="clear"
         uncheckedIcon="add"
-        checkedColor="red"
+        checkedColor={colors.error}
         checked={checked4}
         onPress={() => setChecked4(!checked4)}
       />
@@ -60,7 +60,7 @@ export default ({navigation}) => {
         iconType="material"
         checkedIcon="add"
         uncheckedIcon="add"
-        checkedColor="green"
+        checkedColor={colors.success}
         checked={checked5}
         onPress={() => setChecked5(!checked5)}
       />

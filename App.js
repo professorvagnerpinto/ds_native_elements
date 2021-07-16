@@ -117,12 +117,13 @@ const theme = {
   },
   colors: {
     //primary: 'red',
-    secundary: 'orange',
+    secondary: 'orange',
     blue1: '#3498db',
     blue2: '#00aced',
     blue3: '#517fa4',
     orange: '#f50',
     lilac: '#a82dea',
+    modalBackground: 'rgba(0.5, 0.25, 0, 0.2)',
   },
 };
 

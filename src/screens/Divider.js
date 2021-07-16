@@ -1,7 +1,6 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, Divider} from 'react-native-elements';
+import {Header, Divider, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   return (
@@ -23,7 +22,7 @@ export default ({navigation}) => {
       <Divider
         orientation="horizontal"
         subHeader="Test"
-        subHeaderStyle={{color: 'blue'}}
+        subHeaderStyle={{color: colors.primary}}
       />
     </View>
   );

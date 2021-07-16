@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, ListItem, Button, Avatar} from 'react-native-elements';
+import {Header, ListItem, Button, Avatar, colors} from 'react-native-elements';
 
 export default ({navigation}) => {
   const [data, setData] = useState([
@@ -46,7 +46,7 @@ export default ({navigation}) => {
           leftContent={
             <Button
               title="Info"
-              icon={{name: 'info', color: 'white'}}
+              icon={{name: 'info', color: colors.white}}
               buttonStyle={{minHeight: '100%'}}
               containerStyle={{width: '100%'}}
               onPress={() => alert(item.name + '\n' + item.subtitle)}
@@ -55,8 +55,8 @@ export default ({navigation}) => {
           rightContent={
             <Button
               title="Delete"
-              icon={{name: 'delete', color: 'white'}}
-              buttonStyle={{minHeight: '100%', backgroundColor: 'red'}}
+              icon={{name: 'delete', color: colors.white}}
+              buttonStyle={{minHeight: '100%', backgroundColor: colors.error}}
               containerStyle={{width: '100%', height: '95%'}}
               onPress={() => excluir(item)}
             />
